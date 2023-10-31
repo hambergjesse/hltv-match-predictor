@@ -6,14 +6,39 @@ import("p-limit").then((pLimitModule) => {
   const delayBetweenCalls = 7500; // 10-second delay
 
   // Function to calculate the team's strength based on team rank and player stats
-  function calculateTeamStrength(playerStats) {
+  async function calculateTeamStrength(playerStats, players) {
     if (playerStats && typeof playerStats === "object") {
-      // Calculate the team's strength using the formula
       return (
         (playerStats.killsPerRound +
           playerStats.mapsPlayed +
           playerStats.roundsContributed) *
         playerStats.rating
+      );
+    } else if (players.length > 0) {
+      // Calculate average player statistics
+      const averageStats = {
+        rating: 0,
+        killsPerRound: 0,
+        mapsPlayed: 0,
+        roundsContributed: 0,
+      };
+
+      for (const player of players) {
+        if (player && player.playerStats) {
+          averageStats.rating += player.playerStats.rating;
+          averageStats.killsPerRound += player.playerStats.killsPerRound;
+          averageStats.mapsPlayed += player.playerStats.mapsPlayed;
+          averageStats.roundsContributed +=
+            player.playerStats.roundsContributed;
+        }
+      }
+
+      // Calculate the team's strength using average values
+      return (
+        (averageStats.killsPerRound +
+          averageStats.mapsPlayed +
+          averageStats.roundsContributed) *
+        averageStats.rating
       );
     } else {
       console.error("Invalid player statistics format.");
@@ -84,7 +109,7 @@ import("p-limit").then((pLimitModule) => {
         roundsContributed: 0,
       };
 
-      for (const player of players) {
+      const playerStatsPromises = players.map(async (player) => {
         const playerStats = await fetchPlayerStatsWithDelay(player.name);
         if (playerStats) {
           teamStats.rating += playerStats.rating;
@@ -92,12 +117,14 @@ import("p-limit").then((pLimitModule) => {
           teamStats.mapsPlayed += playerStats.mapsPlayed;
           teamStats.roundsContributed += playerStats.roundsContributed;
         }
-      }
+      });
+
+      await Promise.all(playerStatsPromises);
 
       // Calculate the team's strength
-      const teamStrength = calculateTeamStrength(teamStats);
+      const teamStrength = calculateTeamStrength(teamStats, players);
 
-      console.log(`Team ${teamName} Strength: ${teamStrength}`);
+      console.log(`Team ${teamName} Strength: ${await teamStrength}`);
       return teamStrength;
     } catch (error) {
       console.error("Error fetching team stats:", error);
