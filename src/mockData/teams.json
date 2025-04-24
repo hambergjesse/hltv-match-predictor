@@ -1,0 +1,335 @@
+{
+    "Natus Vincere": {
+        "id": 4608,
+        "name": "Natus Vincere",
+        "rank": 5,
+        "players": [
+            {
+                "name": "s1mple",
+                "id": 7998,
+                "role": "AWPer",
+                "timeOnTeam": "8 years"
+            },
+            {
+                "name": "b1t",
+                "id": 18987,
+                "role": "Rifler",
+                "timeOnTeam": "3 years"
+            },
+            {
+                "name": "iM",
+                "id": 19692,
+                "role": "IGL",
+                "timeOnTeam": "6 months"
+            },
+            {
+                "name": "w0nderful",
+                "id": 21183,
+                "role": "Rifler",
+                "timeOnTeam": "6 months"
+            },
+            {
+                "name": "fear",
+                "id": 21184,
+                "role": "Support",
+                "timeOnTeam": "6 months"
+            }
+        ]
+    },
+    "FaZe": {
+        "id": 6667,
+        "name": "FaZe",
+        "rank": 2,
+        "players": [
+            {
+                "name": "broky",
+                "id": 18053,
+                "role": "AWPer",
+                "timeOnTeam": "4 years"
+            },
+            {
+                "name": "karrigan",
+                "id": 429,
+                "role": "IGL",
+                "timeOnTeam": "3 years"
+            },
+            {
+                "name": "rain",
+                "id": 8183,
+                "role": "Entry",
+                "timeOnTeam": "8 years"
+            },
+            {
+                "name": "ropz",
+                "id": 11816,
+                "role": "Lurker",
+                "timeOnTeam": "2 years"
+            },
+            {
+                "name": "frozen",
+                "id": 9960,
+                "role": "Rifler",
+                "timeOnTeam": "6 months"
+            }
+        ]
+    },
+    "Vitality": {
+        "id": 9565,
+        "name": "Vitality",
+        "rank": 3,
+        "players": [
+            {
+                "name": "ZywOo",
+                "id": 11893,
+                "role": "AWPer",
+                "timeOnTeam": "5 years"
+            },
+            {
+                "name": "apEX",
+                "id": 7322,
+                "role": "IGL",
+                "timeOnTeam": "4 years"
+            },
+            {
+                "name": "dupreeh",
+                "id": 7398,
+                "role": "Entry",
+                "timeOnTeam": "2 years"
+            },
+            {
+                "name": "Spinx",
+                "id": 10984,
+                "role": "Rifler",
+                "timeOnTeam": "1 year"
+            },
+            {
+                "name": "flameZ",
+                "id": 19389,
+                "role": "Support",
+                "timeOnTeam": "6 months"
+            }
+        ]
+    },
+    "G2": {
+        "id": 5995,
+        "name": "G2",
+        "rank": 1,
+        "players": [
+            {
+                "name": "m0NESY",
+                "id": 19230,
+                "role": "AWPer",
+                "timeOnTeam": "2 years"
+            },
+            {
+                "name": "HooXi",
+                "id": 10994,
+                "role": "IGL",
+                "timeOnTeam": "1 year"
+            },
+            {
+                "name": "NiKo",
+                "id": 3741,
+                "role": "Rifler",
+                "timeOnTeam": "3 years"
+            },
+            {
+                "name": "nexa",
+                "id": 10264,
+                "role": "Rifler",
+                "timeOnTeam": "6 months"
+            },
+            {
+                "name": "jks",
+                "id": 4679,
+                "role": "Support",
+                "timeOnTeam": "1 year"
+            }
+        ]
+    },
+    "MOUZ": {
+        "id": 4494,
+        "name": "MOUZ",
+        "rank": 4,
+        "players": [
+            {
+                "name": "torzsi",
+                "id": 19275,
+                "role": "AWPer",
+                "timeOnTeam": "2 years"
+            },
+            {
+                "name": "siuhy",
+                "id": 19854,
+                "role": "IGL",
+                "timeOnTeam": "1 year"
+            },
+            {
+                "name": "xertioN",
+                "id": 19392,
+                "role": "Rifler",
+                "timeOnTeam": "1 year"
+            },
+            {
+                "name": "Brollan",
+                "id": 13666,
+                "role": "Rifler",
+                "timeOnTeam": "6 months"
+            },
+            {
+                "name": "acoR",
+                "id": 11627,
+                "role": "Support",
+                "timeOnTeam": "6 months"
+            }
+        ]
+    },
+    "Team Spirit": {
+        "id": 7020,
+        "name": "Team Spirit",
+        "rank": 6,
+        "players": [
+            {
+                "name": "zont1x",
+                "id": 21012,
+                "role": "AWPer",
+                "timeOnTeam": "1 year"
+            },
+            {
+                "name": "donk",
+                "id": 20868,
+                "role": "IGL",
+                "timeOnTeam": "1 year"
+            },
+            {
+                "name": "magixx",
+                "id": 17513,
+                "role": "Rifler",
+                "timeOnTeam": "4 years"
+            },
+            {
+                "name": "sh1ro",
+                "id": 17149,
+                "role": "Rifler",
+                "timeOnTeam": "6 months"
+            },
+            {
+                "name": "ax1le",
+                "id": 17148,
+                "role": "Support",
+                "timeOnTeam": "6 months"
+            }
+        ]
+    },
+    "Complexity": {
+        "id": 5005,
+        "name": "Complexity",
+        "rank": 7,
+        "players": [
+            {
+                "name": "hallzerk",
+                "id": 15631,
+                "role": "AWPer",
+                "timeOnTeam": "2 years"
+            },
+            {
+                "name": "JT",
+                "id": 13776,
+                "role": "IGL",
+                "timeOnTeam": "2 years"
+            },
+            {
+                "name": "Grim",
+                "id": 18188,
+                "role": "Rifler",
+                "timeOnTeam": "2 years"
+            },
+            {
+                "name": "floppy",
+                "id": 17785,
+                "role": "Rifler",
+                "timeOnTeam": "2 years"
+            },
+            {
+                "name": "junior",
+                "id": 18288,
+                "role": "Support",
+                "timeOnTeam": "6 months"
+            }
+        ]
+    },
+    "Falcons": {
+        "id": 11283,
+        "name": "Falcons",
+        "rank": 8,
+        "players": [
+            {
+                "name": "ISSAA",
+                "id": 8575,
+                "role": "AWPer",
+                "timeOnTeam": "1 year"
+            },
+            {
+                "name": "KSCERATO",
+                "id": 15631,
+                "role": "IGL",
+                "timeOnTeam": "6 months"
+            },
+            {
+                "name": "saffee",
+                "id": 19345,
+                "role": "Rifler",
+                "timeOnTeam": "6 months"
+            },
+            {
+                "name": "drop",
+                "id": 19512,
+                "role": "Rifler",
+                "timeOnTeam": "6 months"
+            },
+            {
+                "name": "chelo",
+                "id": 12400,
+                "role": "Support",
+                "timeOnTeam": "6 months"
+            }
+        ]
+    },
+    "Astralis": {
+        "id": 6665,
+        "name": "Astralis",
+        "rank": 9,
+        "players": [
+            {
+                "name": "device",
+                "id": 7592,
+                "role": "AWPer",
+                "timeOnTeam": "1 year"
+            },
+            {
+                "name": "blameF",
+                "id": 15165,
+                "role": "IGL",
+                "timeOnTeam": "3 years"
+            },
+            {
+                "name": "Staehr",
+                "id": 21490,
+                "role": "Rifler",
+                "timeOnTeam": "1 year"
+            },
+            {
+                "name": "jabbi",
+                "id": 19345,
+                "role": "Rifler",
+                "timeOnTeam": "2 years"
+            },
+            {
+                "name": "Buzz",
+                "id": 21491,
+                "role": "Support",
+                "timeOnTeam": "6 months"
+            }
+        ]
+    }
+} 

@@ -1,0 +1,16 @@
+{
+  "api": {
+    "delayBetweenCallsMs": 15000
+  },
+  "prediction": {
+    "defaultPlayerRating": 1.0,
+    "ratingThreshold": 0.05,
+    "rankNudgeEffect": 0.02,
+    "h2hMinMatches": 5,
+    "h2hNudgeMaxEffect": 0.05,
+    "probabilityScalingFactor": 5.0
+  },
+  "cache": {
+    "saveDebounceMs": 2000
+  }
+} 

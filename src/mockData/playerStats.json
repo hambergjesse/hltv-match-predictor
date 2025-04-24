@@ -1,0 +1,123 @@
+{
+    "m0NESY": {
+        "name": "m0NESY",
+        "id": 19230,
+        "rating": 1.24,
+        "killsPerRound": 0.76,
+        "headshots": 38.2,
+        "mapsPlayed": 156,
+        "deathsPerRound": 0.62,
+        "roundsContributed": 72.5,
+        "timestamp": 1709654400000
+    },
+    "NiKo": {
+        "name": "NiKo",
+        "id": 3741,
+        "rating": 1.18,
+        "killsPerRound": 0.82,
+        "headshots": 45.7,
+        "mapsPlayed": 189,
+        "deathsPerRound": 0.68,
+        "roundsContributed": 75.3,
+        "timestamp": 1709654400000
+    },
+    "broky": {
+        "name": "broky",
+        "id": 18053,
+        "rating": 1.15,
+        "killsPerRound": 0.72,
+        "headshots": 35.8,
+        "mapsPlayed": 167,
+        "deathsPerRound": 0.58,
+        "roundsContributed": 70.1,
+        "timestamp": 1709654400000
+    },
+    "ropz": {
+        "name": "ropz",
+        "id": 11816,
+        "rating": 1.21,
+        "killsPerRound": 0.79,
+        "headshots": 48.2,
+        "mapsPlayed": 178,
+        "deathsPerRound": 0.65,
+        "roundsContributed": 73.8,
+        "timestamp": 1709654400000
+    },
+    "ZywOo": {
+        "name": "ZywOo",
+        "id": 11893,
+        "rating": 1.32,
+        "killsPerRound": 0.85,
+        "headshots": 41.5,
+        "mapsPlayed": 195,
+        "deathsPerRound": 0.55,
+        "roundsContributed": 78.2,
+        "timestamp": 1709654400000
+    },
+    "HooXi": {
+        "name": "HooXi",
+        "id": 10994,
+        "rating": 0.98,
+        "killsPerRound": 0.58,
+        "headshots": 32.1,
+        "mapsPlayed": 145,
+        "deathsPerRound": 0.72,
+        "roundsContributed": 68.5,
+        "timestamp": 1709654400000
+    },
+    "karrigan": {
+        "name": "karrigan",
+        "id": 429,
+        "rating": 0.95,
+        "killsPerRound": 0.55,
+        "headshots": 30.8,
+        "mapsPlayed": 182,
+        "deathsPerRound": 0.75,
+        "roundsContributed": 67.2,
+        "timestamp": 1709654400000
+    },
+    "rain": {
+        "name": "rain",
+        "id": 8183,
+        "rating": 1.05,
+        "killsPerRound": 0.68,
+        "headshots": 42.3,
+        "mapsPlayed": 165,
+        "deathsPerRound": 0.70,
+        "roundsContributed": 71.5,
+        "timestamp": 1709654400000
+    },
+    "nexa": {
+        "name": "nexa",
+        "id": 10264,
+        "rating": 1.08,
+        "killsPerRound": 0.70,
+        "headshots": 39.5,
+        "mapsPlayed": 158,
+        "deathsPerRound": 0.65,
+        "roundsContributed": 72.8,
+        "timestamp": 1709654400000
+    },
+    "jks": {
+        "name": "jks",
+        "id": 4679,
+        "rating": 1.12,
+        "killsPerRound": 0.73,
+        "headshots": 43.7,
+        "mapsPlayed": 142,
+        "deathsPerRound": 0.63,
+        "roundsContributed": 74.1,
+        "timestamp": 1709654400000
+    },
+    "frozen": {
+        "name": "frozen",
+        "id": 9960,
+        "rating": 1.14,
+        "killsPerRound": 0.75,
+        "headshots": 44.2,
+        "mapsPlayed": 152,
+        "deathsPerRound": 0.62,
+        "roundsContributed": 73.5,
+        "timestamp": 1709654400000
+    }
+} 

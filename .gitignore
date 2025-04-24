@@ -1,1 +1,11 @@
-node_modules
+# Node modules
+node_modules/
+
+# Cursor AI state
+.cursor/
+
+# Cache files (optional - uncomment if you don't want to commit cache)
+# cache/
+
+# Sensitive or user-specific config (if config contained secrets)
+# config.json

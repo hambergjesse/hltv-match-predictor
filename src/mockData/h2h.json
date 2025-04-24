@@ -1,0 +1,170 @@
+{
+    "G2-FaZe": {
+        "team1Wins": 3,
+        "team2Wins": 2,
+        "totalMatches": 5,
+        "matches": [
+            {
+                "date": 1709308800000,
+                "event": "IEM Katowice 2024",
+                "map": "Inferno",
+                "winner": 5995,
+                "score": "16-14"
+            },
+            {
+                "date": 1708704000000,
+                "event": "ESL Pro League Season 19",
+                "map": "Mirage",
+                "winner": 6667,
+                "score": "16-13"
+            },
+            {
+                "date": 1707494400000,
+                "event": "BLAST Premier Spring Groups 2024",
+                "map": "Ancient",
+                "winner": 5995,
+                "score": "16-11"
+            },
+            {
+                "date": 1706284800000,
+                "event": "BLAST Premier World Final 2023",
+                "map": "Nuke",
+                "winner": 6667,
+                "score": "16-12"
+            },
+            {
+                "date": 1705075200000,
+                "event": "CS2 Major Copenhagen 2024 EU RMR",
+                "map": "Overpass",
+                "winner": 5995,
+                "score": "16-10"
+            }
+        ]
+    },
+    "G2-Vitality": {
+        "team1Wins": 2,
+        "team2Wins": 3,
+        "totalMatches": 5,
+        "matches": [
+            {
+                "date": 1709222400000,
+                "event": "IEM Katowice 2024",
+                "map": "Vertigo",
+                "winner": 9565,
+                "score": "16-14"
+            },
+            {
+                "date": 1708617600000,
+                "event": "ESL Pro League Season 19",
+                "map": "Anubis",
+                "winner": 5995,
+                "score": "16-12"
+            },
+            {
+                "date": 1707408000000,
+                "event": "BLAST Premier Spring Groups 2024",
+                "map": "Inferno",
+                "winner": 9565,
+                "score": "16-13"
+            },
+            {
+                "date": 1706198400000,
+                "event": "BLAST Premier World Final 2023",
+                "map": "Mirage",
+                "winner": 5995,
+                "score": "16-11"
+            },
+            {
+                "date": 1704988800000,
+                "event": "CS2 Major Copenhagen 2024 EU RMR",
+                "map": "Ancient",
+                "winner": 9565,
+                "score": "16-10"
+            }
+        ]
+    },
+    "5995-6667": {
+        "team1Wins": 3,
+        "team2Wins": 2,
+        "totalMatches": 5,
+        "matches": [
+            {
+                "date": "2024-02-15",
+                "event": "IEM Katowice 2024",
+                "map": "Inferno",
+                "winner": 5995,
+                "score": "16-14"
+            },
+            {
+                "date": "2024-01-20",
+                "event": "BLAST Premier Spring Groups 2024",
+                "map": "Mirage",
+                "winner": 6667,
+                "score": "16-13"
+            },
+            {
+                "date": "2023-12-15",
+                "event": "BLAST Premier World Final 2023",
+                "map": "Ancient",
+                "winner": 5995,
+                "score": "16-12"
+            },
+            {
+                "date": "2023-11-30",
+                "event": "ESL Pro League Season 18",
+                "map": "Nuke",
+                "winner": 6667,
+                "score": "16-10"
+            },
+            {
+                "date": "2023-10-25",
+                "event": "IEM Sydney 2023",
+                "map": "Overpass",
+                "winner": 5995,
+                "score": "16-11"
+            }
+        ]
+    },
+    "9565-4494": {
+        "team1Wins": 4,
+        "team2Wins": 1,
+        "totalMatches": 5,
+        "matches": [
+            {
+                "date": "2024-02-10",
+                "event": "IEM Katowice 2024",
+                "map": "Vertigo",
+                "winner": 9565,
+                "score": "16-9"
+            },
+            {
+                "date": "2024-01-15",
+                "event": "BLAST Premier Spring Groups 2024",
+                "map": "Inferno",
+                "winner": 9565,
+                "score": "16-14"
+            },
+            {
+                "date": "2023-12-10",
+                "event": "ESL Pro League Season 18",
+                "map": "Mirage",
+                "winner": 4494,
+                "score": "16-13"
+            },
+            {
+                "date": "2023-11-25",
+                "event": "IEM Sydney 2023",
+                "map": "Ancient",
+                "winner": 9565,
+                "score": "16-8"
+            },
+            {
+                "date": "2023-10-20",
+                "event": "BLAST Premier Fall Final 2023",
+                "map": "Nuke",
+                "winner": 9565,
+                "score": "16-12"
+            }
+        ]
+    }
+} 

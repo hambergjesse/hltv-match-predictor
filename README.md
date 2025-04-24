@@ -1,58 +1,126 @@
 # HLTV Match Predictor
 
-The HLTV Match Predictor is a Node.js application that predicts the potential winners of Counter-Strike 2 (CS2) matches based on team rankings and player statistics. It utilizes the HLTV API to fetch match data, team rankings, and player statistics to make these predictions. The application calculates a team's strength by considering player statistics and then compares the strengths of two teams to predict the potential winner.
+This project is a Node.js command-line application designed to predict the outcome (win probability) of professional Counter-Strike matches listed on HLTV.org. It fetches data from HLTV using an unofficial API library, processes it using a custom prediction model, tracks prediction accuracy over time, and runs automatically on a schedule.
 
-## How It Works
+## Features
 
-The application consists of the following main components and functions:
+*   **Daily Match Prediction:** Automatically fetches matches scheduled for the current day from HLTV.
+*   **Hybrid Prediction Model:** Calculates win probabilities based on:
+    *   Average player Rating 2.0 (with caching).
+    *   Official HLTV team rank (as a tie-breaker).
+    *   Recent Head-to-Head (H2H) results.
+*   **Result Tracking & Accuracy:**
+    *   Stores predictions and fetches actual match results after completion.
+    *   Calculates prediction accuracy over various timeframes (Week, Month, All Time).
+    *   Displays accuracy statistics.
+*   **Scheduled Operation:**
+    *   Runs predictions automatically at the start of the day (configurable cron schedule).
+    *   Updates results and calculates accuracy at the end of the day (configurable cron schedule).
+    *   Periodically retries fetching data for any initially failed predictions.
+*   **Robust API Interaction:**
+    *   Uses the `hltv` library.
+    *   Implements configurable rate limiting and delays to avoid API bans.
+    *   Persistent file-based caching for player statistics to minimize redundant API calls.
+*   **Configuration:** Most operational parameters (API delays, prediction constants, cache settings, cron schedules, logging level) are configurable via `src/utils/config.js`.
+*   **Logging:** Configurable logging levels (error, warn, info, debug).
+*   **Multiple Run Modes:**
+    *   **Production (`npm start`):** Runs the scheduler for automated daily operation.
+    *   **Development (`npm run start:dev`):** Runs the prediction process once immediately for development.
+    *   **Test (`npm run start:test`):** Runs the prediction process once using mock data, avoiding live API calls.
+*   **Graceful Shutdown:** Handles termination signals (SIGINT, SIGTERM) to stop the scheduler cleanly.
 
-1. **Setup**
+## Installation
 
-   - The application imports the necessary modules, including the HLTV API for data retrieval and a rate limiter to avoid overloading the API.
+1.  **Clone the repository:**
+    ```bash
+    git clone <repository-url>
+    cd hltv-match-predictor
+    ```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-2. **calculateTeamStrength**
+## Usage
 
-   - This function is used to calculate a team's strength based on team rank and player statistics. It takes two parameters: `playerStats` and `players`. If `playerStats` is an object, it uses the player's statistics to calculate the strength. If `playerStats` is not an object, it calculates the average player statistics based on the available player data and then calculates the team's strength using these average values.
+*   **Run in Production Mode (Automated Daily Schedule):**
+    ```bash
+    npm start
+    ```
+    This will start the scheduler, which runs prediction and result-checking jobs based on the cron schedules defined in `src/utils/config.js`.
 
-3. **fetchPlayerStatsWithDelay**
+*   **Run Once for Development (Uses Live API):**
+    ```bash
+    npm run start:dev
+    ```
+    This runs the prediction process immediately (using `src/core/main.js`) for today's matches and then exits.
 
-   - This function fetches a player's statistics by name with a delay to avoid overloading the HLTV API. It returns a Promise and uses the `apiLimit` rate limiter to control the rate of API requests.
+*   **Run Once with Mock Data (No Live API Calls for Matches):**
+    ```bash
+    npm run start:test
+    ```
+    This runs the prediction process immediately (using `src/core/main.js --test`) with mock data defined in `src/utils/mockData.js` and then exits.
 
-4. **fetchPlayerStats**
+*   **Export Statistics (Future Feature):**
+    ```bash
+    npm run export
+    ```
+    *(Note: The script `src/tools/exportStats.js` needs to be implemented)*
 
-   - This function fetches a player's statistics by name using the HLTV API. It returns the relevant player statistics if available, or logs an error message if the data is not in the expected format.
+## Configuration
 
-5. **fetchTeamStatsWithDelay**
+Key configuration settings can be modified in `src/utils/config.js`:
 
-   - This function fetches a team's statistics by team name with a delay to avoid overloading the HLTV API. It returns a Promise and uses the `delay` function to introduce a delay between requests.
+*   `CACHE_CONFIG`: Cache directory, filename, expiration.
+*   `API_CONFIG`: API call delays, concurrency, retries.
+*   `LOG_CONFIG`: Logging level (`error`, `warn`, `info`, `debug`).
+*   `PREDICTION_CONFIG`: Model parameters (default rating, thresholds, nudges, scaling), data directories.
+*   `SCHEDULER_CONFIG`: Cron patterns for prediction/result jobs, timezone, accuracy alert threshold.
+*   `RESULT_TRACKING_CONFIG`: Data retention periods, aggregation thresholds, export settings.
 
-6. **fetchTeamStats**
+## Technology Stack
 
-   - This function fetches a team's statistics by team name using the HLTV API. It retrieves the team's players and their statistics and calculates the team's strength using the `calculateTeamStrength` function.
+*   **Runtime:** Node.js (>= v18.0.0)
+*   **Core Libraries:**
+    *   `hltv`: For interacting with the HLTV API.
+    *   `p-limit`: For API rate limiting.
+    *   `cron`: For scheduling tasks.
+    *   `date-fns`, `date-fns-tz`: For date/time manipulation.
+*   **Development:** npm
 
-7. **fetchData**
+## Future Considerations
 
-   - This is the main function of the application. It fetches and processes data to predict match outcomes. It fetches today's matches, retrieves the top 30 teams' rankings, and calculates the potential winners for each match based on team strengths.
+Potential ideas include:
+*   Refining the prediction model with more detailed stats.
+*   Adding map-specific prediction logic.
+*   Implementing the `exportStats.js` tool.
+*   Adding more robust error handling and retries.
+*   Implementing unit and integration tests.
 
-8. **delay**
-   - A helper function that introduces a delay between requests.
+## Directory Structure
 
-## Running the Application
-
-To run the HLTV Match Predictor:
-
-1. Make sure you have Node.js installed on your system.
-
-2. Clone or download the repository.
-
-3. Open your terminal or command prompt and navigate to the project directory.
-
-4. Run the following command to install the required dependencies: `npm install`
-
-5. Edit the code as needed and update any API keys or configuration settings if required.
-
-6. Run the application using the following command: `node hltvMatchPredictor.js`
-
-The application will fetch data from the HLTV API and predict the potential winners of today's matches.
-
-**Note:** Please make sure to review and respect HLTV's API usage policy and terms of service while using this application to fetch data.
+```
+src/
+├── index.js                  # Main application entry point (production)
+├── core/                     # Core application flow and orchestration
+│   ├── main.js               # Handles a single prediction run
+│   └── scheduler.js          # Cron job scheduling
+├── services/                 # External services interaction (API, Cache)
+│   ├── hltvClient.js         # HLTV API interaction, facade
+│   └── cacheManager.js       # Caching implementation details
+├── prediction/               # Prediction calculation logic
+│   ├── strengthCalculator.js # Orchestrates prediction steps
+│   ├── playerStrength.js     # Calculates weighted player stats
+│   └── confidenceCalculator.js # Calculates prediction confidence
+├── data/                     # Data persistence and management
+│   └── predictionTracker.js  # Storing/updating prediction results
+├── utils/                    # Shared utilities, helpers, config
+│   ├── config.js             # Configuration loading and management
+│   ├── logger.js             # Logging utility
+│   ├── utils.js              # General utility functions (e.g., delay)
+│   └── mockData.js           # Mock client/data for testing
+├── tools/                    # Standalone utility scripts
+│   └── exportStats.js
+└── __tests__/                # Unit/integration tests (Existing)
+    └── ...
+```
